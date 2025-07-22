@@ -1,8 +1,0 @@
----
-title: "mywebpage"
-author: ""
-format: html
-
----
-
-Here you can see my first HTML() document created with quarto 
