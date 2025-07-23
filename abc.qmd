@@ -1,0 +1,54 @@
+---
+title: "mynewquartodocument"
+format: html
+  html: 
+   toc: true
+   toc-location: left
+   grid:
+    sidebar-width: 300px
+    body-width: 900px
+    margin-width: 300px
+    gutter-width: 1.5rem
+    :::{.column-margin}
+I want this picture displayed in the margin 
+![](img/peacock.png)
+:::
+citation-location: margin
+`ggplot2` is an R [@rsoft] package developed by [@ggplot]. @epifania2024 published an interesting paper on Linear Mixed Effects Models. 
+::: {.grid}
+
+::: {.g-col-4}
+
+First column, 4/12 of the total width
+
+:::
+
+::: {.g-col-8}
+
+Second column, 8/12 of the total width 
+
+:::
+
+:::
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this 
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).

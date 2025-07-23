@@ -1,0 +1,118 @@
+---
+title: "My quarto file"
+author: "Jane Doe"
+date: today
+format: 
+  html:
+    self-contained: true     
+    toc: true                   
+    toc-title: My contents   
+    toc-location: left
+    theme: mindy  
+    fontsize: 28px    
+lang: en
+bibliography: file1.bib
+---
+:::{.column-margin}
+I want this picture displayed in the margin 
+![](images.png)
+:::
+citation-location: margin
+`ggplot2` is an R [@rsoft] package developed by [@ggplot]. @epifania2024 published an interesting paper on Linear Mixed Effects Models. 
+::: {.grid}
+
+::: {.g-col-4}
+
+First column, 4/12 of the total width
+
+:::
+
+::: {.g-col-8}
+
+Second column, 8/12 of the total width 
+
+:::
+
+:::
+  :::: {.columns}
+
+
+::: {.column width="50%"}
+
+code-fold: true
+code-summary: I want to see this specific code
+
+This is my first column!
+
+:::
+
+::: {.column width="50%"}
+
+And this is the second column
+:::
+
+::::
+::: {.panel-tabset}
+
+
+```{r}
+setwd("C:/Users/aysem/OneDrive/Belgeler/GitHub/my_new_project")
+data = read.csv("dataset.csv")
+head(data)
+```
+
+
+## Aim
+
+Here I present the aim of the study 
+
+## Methods
+
+Here I present the methods used to pursue the aim
+
+## Results
+
+And here I present the results
+
+::: {.callout-note}
+To say something general
+:::
+
+::: {.callout-tip}
+## I'm a title!
+
+Maybe a tip :)
+:::
+
+::: {.callout-caution}
+## Pay attention!
+
+Please pay attention to whatever it is written here
+:::
+
+
+::: {.callout-warning}
+Just saying you should be careful
+:::
+
+:::  
+::: {.callout-warning collapse="true"}
+
+## Look at me!!
+
+I collapse (Actually you can't see the callout collapsing, just copy & paste in your file)
+
+:::
+
+
+::: {.callout-tip icon="false"}
+## I'm not an icon
+
+I removed the icon from this specific callout. 
+
+If you want to remove the icons from **all** the blocks, go in the YAML: 
+
+
+:::
+
+Here you can see my first HTML(https://aysemetin97.github.io/my_new_project/) document created with quarto 
