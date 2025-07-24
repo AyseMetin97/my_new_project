@@ -1,21 +1,105 @@
 ---
 title: "mypresentation1"
-author: "Ayse"
-format: revealjs
+author: 
+  name: "Ayse Metin"
+format: 
+   revealjs:
+     theme: [beige, scss1.scss]
+     self-contained: true
+     scrollable: true 
+     footer: "Presentations"
+     slide-number: c/t
+     show-slide-number: all
 ---
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
 
-## Quarto
+# Cats of Turkiye
 
+::: {.r.stack}
+![](cat6.jpg){width="500" height="400"} 
+:::
+
+## Tekir Cat
+
+![](cat7.jpg){.absolute top=350 left=0 width="450" height="300"}
+
+##
+
+
+:::{.r-stack}
+![](cat8.jpg){.fragment width="550" height="650"}
+
+
+:::
+
+## Van Cat
+
+![](cat9.jpg){.absolute top=5 right=25 width="450" height="250"}
+
+## My slide with no footer {footer="false"}
 Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
 
-## Bullets
+# careful
 
-When you click the **Render** button a document will be generated that includes:
+## winter
 
--   Content authored with markdown
--   Output from executable code
+![](cat11.jpg){.absolute top=5 right=25 width="450" height="250"}
 
-## Code
+## food
+
+![](cat12.jpg){.absolute top=5 right=25 width="450" height="250"}
+
+
+## milo <3
+
+:::{.r-stack}
+![](milo1.jpg){.absolute .fragment data-fragment-index="1" top=5 right=25 width="450" height="550"}
+![](milo5.jpg){.absolute .fragment data-fragment-index="2" top=5 right=25 width="450" height="550"}
+![](milo2.jpg){.absolute .fragment data-fragment-index="3" top=5 right=25 width="450" height="550"}
+:::
+
+
+
+## Code1
+```{r}
+#| fig-align: center
+#| output-location: fragment
+#| code-line-numbers: "|2,3|"
+
+mtcars %>%                               
+  ggplot( aes(mpg, hp)) +   
+  geom_point() 
+```
+
+## {auto-animate="true"}
+```{r}
+#| fig-align: center
+#| output-location: column-fragment
+
+mtcars %>%                               
+  ggplot( aes(mpg, hp, size = gear)) +   
+  geom_point() +                             
+  geom_smooth(method = "lm")        
+```
+
+## Code3
+```{r}
+#| fig-align: center
+#| output-location: fragment
+#| code-line-numbers: "|3|"
+
+mtcars %>%                               
+  ggplot( aes(mpg, hp, color = gear)) +   
+  geom_point() + 
+  geom_smooth(method = "lm")       
+```
+
+# End
+
+## My specific scrollable slide {.scrollable}
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
 

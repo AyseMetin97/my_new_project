@@ -1,6 +1,6 @@
 ---
 title: "My quarto file"
-author: "Jane Doe"
+author: "Ayse Metin"
 date: today
 lang: en
 bibliography: file1.bib
@@ -11,51 +11,37 @@ format:
     toc: true                   
     toc-title: My contents   
     toc-location: left
-    theme: mindy  
+    theme: minty  
     fontsize: 28px   
     code-fold: true
     code-summary: I want to see this specific code
 ---
-:::{.column-margin}
-I want this picture displayed in the margin 
-![](images.png)
+::: {.column-margin}
+I want this picture displayed in the margin  
+![](milo2.png){width=200}
 :::
+
 `ggplot2` is an R [@rsoft] package developed by [@ggplot]. @epifania2024 published an interesting paper on Linear Mixed Effects Models. 
 
-
 ::: {.grid}
-
 ::: {.g-col-4}
-
 First column, 4/12 of the total width
-
 :::
 
 ::: {.g-col-8}
-
 Second column, 8/12 of the total width 
-
+:::
 :::
 
-:::
-
-
-:::: {.columns}
-
-
+::: {.columns}
 ::: {.column width="50%"}
-
-
 This is my first column!
-
 :::
 
 ::: {.column width="50%"}
-
 And this is the second column
 :::
-
-::::
+:::
 
 ::: {.panel-tabset}
 
@@ -64,69 +50,79 @@ And this is the second column
 setwd("C:/Users/aysem/OneDrive/Belgeler/GitHub/my_new_project")
 data = read.csv("dataset.csv")
 ```
-# chunk 1 show the code
+# chunk 1 Head
 ```{r}
 #| echo: true
 #| label: head-rock
 #| code-summary: "begging of the summary"
 head(rock)
 ```
-# chunk 2 show the code
+# chunk 2 Echo
 ```{r}
 #| echo: fenced
 head(rock)
 ```
-# chunk 3 show the code
+# chunk 3 Summary
 ```{r}
 #| echo: true
 #| label: summary-args
-#| code-summary: "summary fonksiyonu argümanla kullanımı"
-
+#| code-summary: "summary argumanla kullan??m??"
 summary(rock, digits = 2)
 ```
-```
 
+:::
 
 ## Aim
 
-Here I present the aim of the study 
+This is my cat Milo!
+- 4 years
+- precious of our family
+- British short
 
-## Methods
+I want this picture displayed in the margin
 
-Here I present the methods used to pursue the aim
+![](milo1.png)
 
-## Results
+## What Milo do?
+
+- Sleeps 
+- Eats
+- Sleeps(again)
+
+## What makes him happy?
+
+![](milo7.png){width=200}
+
+- cuddling
+- every kind of random stuff for playing
+- very good mosquito catcher 
 
 And here I present the results
 
 ::: {.callout-note}
-To say something general
+You will never regret
 :::
 
 ::: {.callout-tip}
-## I'm a title!
-
-Maybe a tip :)
+## a friend is always better
+![](milo8.png){width=200}
 :::
 
 ::: {.callout-caution}
 ## Pay attention!
-
-Please pay attention to whatever it is written here
+what is the reason today that you don't have a cat
+![](milo7.png){width=200}
 :::
 
 
 ::: {.callout-warning}
-Just saying you should be careful
+DONT BUY, ADOPT!!! 
 :::
 
-:::  
 ::: {.callout-warning collapse="true"}
-
 ## Look at me!!
 
 I collapse (Actually you can't see the callout collapsing, just copy & paste in your file)
-
 :::
 
 
@@ -136,7 +132,7 @@ I collapse (Actually you can't see the callout collapsing, just copy & paste in 
 I removed the icon from this specific callout. 
 
 If you want to remove the icons from **all** the blocks, go in the YAML: 
-
+:::
 
 :::
 
