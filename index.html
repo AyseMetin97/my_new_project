@@ -3106,11 +3106,7 @@ vertical-align: -.125em;
     <h2 id="toc-title">My contents</h2>
    
   <ul>
-  <li><a href="#aim" id="toc-aim" class="nav-link active" data-scroll-target="#aim">Aim</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  <li><a href="#look-at-me" id="toc-look-at-me" class="nav-link" data-scroll-target="#look-at-me">Look at me!!</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link active" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
 </div>
@@ -3158,65 +3154,78 @@ R Core Team. 2025. <em>R: A Language and Environment for Statistical Computing</
 Wickham, Hadley. 2016. <em>Ggplot2: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
 </div><div id="ref-epifania2024" class="csl-entry" role="listitem">
 Epifania, Ottavia M, Pasquale Anselmi, and Egidio Robusto. 2024. <span>“A Guided Tutorial on Linear Mixed-Effects Models for the Analysis of Accuracies and Response Times in Experiments with Fully Crossed Design.”</span> <em>Psychological Methods</em>. https://doi.org/<a href="https://doi.org/10.1037/met0000708">https://doi.org/10.1037/met0000708</a>.
-</div></div><p><code>ggplot2</code> is an R <span class="citation" data-cites="rsoft">(<a href="#ref-rsoft" role="doc-biblioref">R Core Team 2025</a>)</span> package developed by <span class="citation" data-cites="ggplot">(<a href="#ref-ggplot" role="doc-biblioref">Wickham 2016</a>)</span>. <span class="citation" data-cites="epifania2024">Epifania, Anselmi, and Robusto (<a href="#ref-epifania2024" role="doc-biblioref">2024</a>)</span> published an interesting paper on Linear Mixed Effects Models. ::: {.grid}</p>
+</div></div><p><code>ggplot2</code> is an R <span class="citation" data-cites="rsoft">(<a href="#ref-rsoft" role="doc-biblioref">R Core Team 2025</a>)</span> package developed by <span class="citation" data-cites="ggplot">(<a href="#ref-ggplot" role="doc-biblioref">Wickham 2016</a>)</span>. <span class="citation" data-cites="epifania2024">Epifania, Anselmi, and Robusto (<a href="#ref-epifania2024" role="doc-biblioref">2024</a>)</span> published an interesting paper on Linear Mixed Effects Models.</p>
+<div class="grid">
 <div class="g-col-4">
 <p>First column, 4/12 of the total width</p>
 </div>
 <div class="g-col-8">
 <p>Second column, 8/12 of the total width</p>
 </div>
-<p>::: :::: {.columns}</p>
+</div>
+<div class="columns">
 <div class="column" style="width:50%;">
 <p>This is my first column!</p>
-</div>
-<div class="column" style="width:50%;">
+</div><div class="column" style="width:50%;">
 <p>And this is the second column</p>
 </div>
-<p>:::: ::: {.panel-tabset}</p>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href>chunk 1 show the code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href>chunk 2 show the code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href>chunk 3 show the code</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<details class="code-fold">
+<summary>begging of the summary</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(rock)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>  area    peri     shape perm
+1 4990 2791.90 0.0903296  6.3
+2 7002 3892.60 0.1486220  6.3
+3 7558 3930.66 0.1833120  6.3
+4 7352 3869.32 0.1170630  6.3
+5 7943 3948.54 0.1224170 17.1
+6 7979 4010.15 0.1670450 17.1</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
 <details class="code-fold">
 <summary>I want to see this specific code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;C:/Users/aysem/OneDrive/Belgeler/GitHub/my_new_project&quot;</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">&quot;dataset.csv&quot;</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># chunk 1 show the code</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">head(rock)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>   anxiety flexibility mindfulness activity
-1 50.17244    44.39524          no  pilates
-2 31.47451    47.69823         yes    altro
-3 34.03981    65.58708          no  pilates
-4 37.06712    50.70508          no    altro
-5 48.30549    51.29288          no    altro
-6 16.94087    67.15065         yes    altro</code></pre>
+<pre><code>  area    peri     shape perm
+1 4990 2791.90 0.0903296  6.3
+2 7002 3892.60 0.1486220  6.3
+3 7558 3930.66 0.1833120  6.3
+4 7352 3869.32 0.1170630  6.3
+5 7943 3948.54 0.1224170 17.1
+6 7979 4010.15 0.1670450 17.1</code></pre>
 </div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
 <details class="code-fold">
-<summary>I want to see this specific code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># chunk 1 show the code</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>summary fonksiyonu argümanla kullanımı</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(rock, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>&#39;data.frame&#39;:   300 obs. of  4 variables:
- $ anxiety    : num  50.2 31.5 34 37.1 48.3 ...
- $ flexibility: num  44.4 47.7 65.6 50.7 51.3 ...
- $ mindfulness: chr  &quot;no&quot; &quot;yes&quot; &quot;no&quot; &quot;no&quot; ...
- $ activity   : chr  &quot;pilates&quot; &quot;altro&quot; &quot;pilates&quot; &quot;altro&quot; ...</code></pre>
-</div>
-<details class="code-fold">
-<summary>I want to see this specific code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># chunk 1 show the code</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>    anxiety        flexibility    mindfulness          activity        
- Min.   : 1.483   Min.   :26.91   Length:300         Length:300        
- 1st Qu.:25.977   1st Qu.:44.24   Class :character   Class :character  
- Median :33.922   Median :49.56   Mode  :character   Mode  :character  
- Mean   :33.418   Mean   :50.34                                        
- 3rd Qu.:41.974   3rd Qu.:56.32                                        
- Max.   :64.775   Max.   :82.41                                        </code></pre>
+<pre><code>      area            peri          shape           perm       
+ Min.   : 1016   Min.   : 309   Min.   :0.09   Min.   :   6.3  
+ 1st Qu.: 5305   1st Qu.:1415   1st Qu.:0.16   1st Qu.:  76.5  
+ Median : 7487   Median :2536   Median :0.20   Median : 130.5  
+ Mean   : 7188   Mean   :2682   Mean   :0.22   Mean   : 415.4  
+ 3rd Qu.: 8870   3rd Qu.:3990   3rd Qu.:0.26   3rd Qu.: 777.5  
+ Max.   :12212   Max.   :4864   Max.   :0.46   Max.   :1300.0  </code></pre>
 </div>
 </div>
+<p>```</p>
 <section id="aim" class="level2">
 <h2 class="anchored" data-anchor-id="aim">Aim</h2>
 <p>Here I present the aim of the study</p>
@@ -3280,13 +3289,26 @@ Warning
 <p>Just saying you should be careful</p>
 </div>
 </div>
-<p>:::<br>
-::: {.callout-warning collapse=“true”}</p>
 </section>
-<section id="look-at-me" class="level2">
-<h2 class="anchored" data-anchor-id="look-at-me">Look at me!!</h2>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Look at me!!
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>I collapse (Actually you can’t see the callout collapsing, just copy &amp; paste in your file)</p>
-<p>:::</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -3302,7 +3324,6 @@ I’m not an icon
 </div>
 </div>
 <p>Here you can see my first HTML(https://aysemetin97.github.io/my_new_project/) document created with quarto</p>
-</section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
 

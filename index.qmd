@@ -2,6 +2,9 @@
 title: "My quarto file"
 author: "Jane Doe"
 date: today
+lang: en
+bibliography: file1.bib
+citation-location: margin
 format: 
   html:
     self-contained: true     
@@ -9,16 +12,17 @@ format:
     toc-title: My contents   
     toc-location: left
     theme: mindy  
-    fontsize: 28px    
-lang: en
-bibliography: file1.bib
+    fontsize: 28px   
+    code-fold: true
+    code-summary: I want to see this specific code
 ---
 :::{.column-margin}
 I want this picture displayed in the margin 
 ![](images.png)
 :::
-citation-location: margin
 `ggplot2` is an R [@rsoft] package developed by [@ggplot]. @epifania2024 published an interesting paper on Linear Mixed Effects Models. 
+
+
 ::: {.grid}
 
 ::: {.g-col-4}
@@ -34,13 +38,13 @@ Second column, 8/12 of the total width
 :::
 
 :::
-  :::: {.columns}
+
+
+:::: {.columns}
 
 
 ::: {.column width="50%"}
 
-code-fold: true
-code-summary: I want to see this specific code
 
 This is my first column!
 
@@ -52,13 +56,34 @@ And this is the second column
 :::
 
 ::::
+
 ::: {.panel-tabset}
 
 
 ```{r}
 setwd("C:/Users/aysem/OneDrive/Belgeler/GitHub/my_new_project")
 data = read.csv("dataset.csv")
-head(data)
+```
+# chunk 1 show the code
+```{r}
+#| echo: true
+#| label: head-rock
+#| code-summary: "begging of the summary"
+head(rock)
+```
+# chunk 2 show the code
+```{r}
+#| echo: fenced
+head(rock)
+```
+# chunk 3 show the code
+```{r}
+#| echo: true
+#| label: summary-args
+#| code-summary: "summary fonksiyonu argümanla kullanımı"
+
+summary(rock, digits = 2)
+```
 ```
 
 
@@ -116,3 +141,5 @@ If you want to remove the icons from **all** the blocks, go in the YAML:
 :::
 
 Here you can see my first HTML(https://aysemetin97.github.io/my_new_project/) document created with quarto 
+
+## References
