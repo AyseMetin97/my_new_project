@@ -138,4 +138,6 @@ If you want to remove the icons from **all** the blocks, go in the YAML:
 
 Here you can see my first HTML(https://aysemetin97.github.io/my_new_project/) document created with quarto 
 
+I also have a [PDF](my presentation-in-pdf.pdf)
+
 ## References
