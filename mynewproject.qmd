@@ -1,0 +1,196 @@
+---
+title: "My quarto file"
+author: "Jane Doe"
+date: today
+format: 
+  html:
+    self-contained: true     
+    toc: true                   
+    toc-title: My contents   
+    toc-location: left
+    theme: mindy
+    fontsize: 28px  
+lang: en
+execute: 
+  warning: false
+code-annotations: below
+---
+```{r}
+#| include: false
+
+library(ggplot2)
+library(knitr)
+library(DT)
+library(patchwork) 
+```
+
+# This is a section
+
+# First level     
+Section
+
+# Second level     
+Sub-Section
+
+# Third level     
+Sub-subsection
+
+# Fourt level     
+Paragraph
+
+
+
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this 
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r}
+#| label: resimage1
+#| echo: false
+#| fig-align: center
+#| fig-cap: A plate
+#| fig-cap-location: bottom
+#| out-width: 50%
+knitr::include_graphics("images.png")
+```
+
+
+```{r}
+#| code-fold: true
+#| code-summary: look 
+#| out-width: 50%
+#| fig-align: center
+#| fig-cap: A graph from `mtcars`
+#| fig-cap-location: margin
+#| label: fig-mtcars
+
+ggplot(mtcars,                                   
+       aes(hp, mpg, color = factor(am))) +       
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess") +
+  theme(legend.position = 'bottom')
+```
+
+```{r}
+#| echo: false
+#| label: tbl-iris
+#| tbl-cap: "Iris Data"
+
+kable(head(iris))
+```
+
+```{r}
+#| lst-label: lst-basicPlot
+#| lst-cap: Basic use of the plot() function
+
+plot(cars)
+```
+
+$$
+  z = \frac{x_i - \bar{x}}{s}
+$$ {#eq-standardize}
+
+As we saw in @tbl-iris
+
+# Linear Model
+
+This is a Linear Model:
+
+```{r}
+#| column: margin
+
+lm(hp ~ mpg*am, data = mtcars)
+```
+
+```{r}
+#| column: margin
+
+ggplot(mtcars, 
+       aes(hp, mpg, color = factor(am))) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, method = "loess", linewidth = 1) +
+  theme(legend.position = 'bottom')
+```
+
+```{r}
+#| column: margin
+
+datatable(mtcars,
+  options = list(pageLength = 5))
+```
+
+```{r}
+#| label: fig-plotsModels
+#| fig-cap: "One dataset, different models" 
+#| fig-subcap:
+#|   - "The data"
+#|   - "Polynomial"
+#|   - "Linear Model"
+#|   - "GLM with Poisson" 
+#| layout-nrow: 2
+#| layout-ncol: 2
+
+ggplot(mtcars,
+       aes(mpg, hp, size = gear)) +
+  geom_point()
+
+ggplot(mtcars,
+       aes(mpg, hp, size = gear)) +
+  geom_point() + 
+  geom_smooth()
+
+ggplot(mtcars,
+       aes(mpg, hp, size = gear)) +
+  geom_point() + 
+  geom_smooth(method = "lm")
+
+ggplot(mtcars,
+       aes(mpg, hp, size = gear)) +
+  geom_point() + 
+  geom_smooth(method = "glm", method.args = list(family = "poisson"))
+```
+
+```{r}
+#| label: tbl-tables
+#| tbl-cap: "Datasets"
+#| tbl-subcap: 
+#|   - "Cars"
+#|   - "Pressure"
+#| layout-ncol: 2
+
+kable(head(cars))
+kable(head(pressure))
+```
+
+## GGplot
+```{r}
+#|echo: true
+# line
+mtcars %>%                               # <1>
+  ggplot( aes(mpg, hp, size = gear)) +   # <2>
+  geom_point() +                         # <3>    
+  geom_smooth(method = "lm")             # <4>
+```
+
+The mean of the gear variable in mtcars is `r mean(mtcars$gear)`
+
+This is the code to compute the mean `mean(mtcars$gear)`
+  

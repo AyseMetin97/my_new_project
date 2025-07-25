@@ -110,8 +110,7 @@ You will never regret
 
 ::: {.callout-caution}
 ## Pay attention!
-what is the reason today that you don't have a cat
-![](milo7.png){width=200}
+
 :::
 
 
@@ -125,8 +124,6 @@ DONT BUY, ADOPT!!!
 I collapse (Actually you can't see the callout collapsing, just copy & paste in your file)
 :::
 
-
-::: {.callout-tip icon="false"}
 ## I'm not an icon
 
 I removed the icon from this specific callout. 
@@ -138,6 +135,6 @@ If you want to remove the icons from **all** the blocks, go in the YAML:
 
 Here you can see my first HTML(https://aysemetin97.github.io/my_new_project/) document created with quarto 
 
-I also have a [PDF](my presentation-in-pdf.pdf)
+I also have a [PDF](my-presentation-in-pdf.pdf)
 
 ## References
