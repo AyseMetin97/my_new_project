@@ -1,0 +1,75 @@
+---
+title: "my presentation"
+format:
+  beamer:
+    toc: true
+    toc-title: My toc
+    innertheme: circles
+code-annotations: below
+editor: visual
+---
+
+```{r}
+library(tinytex)
+library(tidyverse)
+```
+
+# This create a section page
+
+## This create a slide
+
+-   First element
+-   Second element
+
+## Another slide Some text in my slide! Yay!
+
+TinyTex It’s convenient because it is easy to use, but it does not offer all the functionalities of LATEX
+
+::::: columns
+::: {.column width="40%"}
+\footnotesize
+
+contents...
+:::
+
+::: {.column width="60%"}
+\scriptsize
+\Large contents...
+:::
+:::::
+
+```{r}
+#| eval: true
+3*2
+
+mtcars %>%                               # <1>
+  ggplot( aes(mpg, hp, size = gear)) +   # <2>
+  geom_point() +                         # <3>    
+  geom_smooth(method = "lm")             # <4>
+
+# <1> Do something
+# <2> Do something else
+# <3> And else
+# <4> Whatever
+```
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
